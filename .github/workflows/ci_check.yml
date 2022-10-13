@@ -4,7 +4,10 @@ name: isotovideo
 on: [push, pull_request]
 jobs:
   test:
-    uses: marocchino/sticky-pull-request-comment@v2
-  with:
-    message: |
-      This is your comment. Can I go now?
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: |
+            This is your comment. Can I go now?
